@@ -94,7 +94,7 @@ EOF
 
   end
 
-  task :gem => [:test]
+  task :gem
   Rake::GemPackageTask.new(Spec) do |p|
     p.need_tar_gz = true
   end
