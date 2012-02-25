@@ -1,5 +1,5 @@
 
-PKG_REVISION = ".0"
+PKG_REVISION = ".1"
 
 $:.unshift "lib" if File.directory? "lib"
 require 'rcodetools/xmpfilter'
@@ -68,7 +68,7 @@ EOF
     s.email = %{"rubikitch" <rubikitch@ruby-lang.org>, "Mauricio Fernandez" <mfp@acm.org>}
     s.homepage = "http://eigenclass.org/hiki.rb?rcodetools"
     s.bindir = "bin"
-    s.executables = %w[rct-complete rct-doc xmpfilter rct-meth-args]
+    s.executables = %w[rct-complete rct-doc xmpfilter rct-meth-args ruby-toggle-file rct-fork]
     s.has_rdoc = true
     s.extra_rdoc_files = %w[README]
     s.rdoc_options << "--main" << "README" << "--title" << 'rcodetools'
