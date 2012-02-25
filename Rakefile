@@ -1,5 +1,5 @@
 
-PKG_REVISION = ".1"
+PKG_REVISION = ".2"
 
 $:.unshift "lib" if File.directory? "lib"
 require 'rcodetools/xmpfilter'
