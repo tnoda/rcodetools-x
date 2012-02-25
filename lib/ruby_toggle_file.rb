@@ -18,7 +18,7 @@ class RubyToggleFile
   end
 
   LIB_RE = %r!/lib/(.+)\.rb$!
-  TEST_RE = %r!/test/(.+/)?test_(.+)\.rb$!
+  TEST_RE = %r!/test/(.+/)?(.+)_test\.rb$!
 
   def test_file(implementation)
     if m = LIB_RE.match(implementation)
@@ -68,8 +68,8 @@ class RubyToggleFile
     exist "#{basedir}test/test_#{node}.rb" if dir
   end
 
-  def test_file_99_autotest_default(implementation, basedir, dir, node) # lib/XXX/NODE.rb -> test/XXX/test_NODE.rb
-    "#{basedir}test/#{dir}test_#{node}.rb"
+  def test_file_99_default(implementation, basedir, dir, node) # lib/XXX/NODE.rb -> test/XXX/test_NODE.rb
+    "#{basedir}test/#{dir}#{node}_test.rb"
   end
 
   def implementation_file_00_rails(test, basedir, dir, node)
